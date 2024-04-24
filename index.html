@@ -4,14 +4,66 @@
     <meta charset="UTF-8">
     <title>Kalkulator Suhu</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* CSS tambahan */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Kalkulator Suhu</h1>
+    
+    <h2>Input Suhu (Celsius)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Celsius</th>
+            </tr>
+        </thead>
+        <tbody id="inputTable">
+            <!-- Tabel input suhu akan diisi secara dinamis -->
+        </tbody>
+    </table>
+
+    <h2>Perhitungan Suhu (Celsius to Fahrenheit)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Celsius</th>
+                <th>Fahrenheit</th>
+            </tr>
+        </thead>
+        <tbody id="calculationTable">
+            <!-- Tabel perhitungan suhu akan diisi secara dinamis -->
+        </tbody>
+    </table>
+
+    <h2>Hasil Konversi (Fahrenheit)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fahrenheit</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable">
+            <!-- Tabel hasil konversi akan diisi secara dinamis -->
+        </tbody>
+    </table>
+
     <form id="temperatureForm">
         <label for="celsius">Masukkan suhu dalam derajat Celsius:</label>
         <input type="number" name="celsius" id="celsius" required>
         <button type="submit">Konversi</button>
     </form>
+
     <div id="result"></div>
     <script src="js/script.js"></script>
 </body>
